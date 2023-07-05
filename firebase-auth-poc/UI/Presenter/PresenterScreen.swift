@@ -16,9 +16,7 @@ struct PresenterScreen: View {
             Button(action: {
                 registerUnRegister()
             }, label: {
-                Text(
-                    buttonTitle()
-                )
+                Text(buttonTitle)
             })
             .padding()
             .frame(width: 200)
@@ -28,7 +26,7 @@ struct PresenterScreen: View {
         }
     }
     
-    private func buttonTitle() -> String {
+    private var buttonTitle: String {
         if self.screenObject.didRegister {
             return "Unregister"
         } else {

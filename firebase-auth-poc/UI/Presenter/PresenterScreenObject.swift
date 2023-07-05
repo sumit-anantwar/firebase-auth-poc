@@ -36,11 +36,12 @@ final class PresenterScreenObject : ObservableObject {
                 
                 DispatchQueue.main.async {
                     self.didRegister = true
-                    self.processing = false
                 }
             } catch {
                 print(error.localizedDescription)
             }
+            
+            self.processing = false
         }
     }
     
@@ -55,23 +56,24 @@ final class PresenterScreenObject : ObservableObject {
                 
                 DispatchQueue.main.async {
                     self.didRegister = false
-                    self.processing = false
                 }
             } catch {
                 print(error.localizedDescription)
             }
+            
+            self.processing = false
         }
     }
     
     private func deleteUser(_ user: User?) async throws {
         if let user = user {
-            print("Unregistering user with email: \(user.email)")
+            print("Unregistering user with email: \(user.email ?? "---")")
             try await user.delete()
         }
     }
     
     private func registerUser(email: String, passwoed: String) async throws -> AuthDataResult {
-        print("Registering user with Email: \(email)")
+        print("Registering user with Email: \(email) --- password: \(passwoed)")
         return try await Auth.auth().createUser(withEmail: email, password: passwoed)
     }
     

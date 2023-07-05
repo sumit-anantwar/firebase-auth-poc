@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B30BEFDC2A554CBF0032F78B /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BEFDB2A554CBF0032F78B /* GenericError.swift */; };
+		B30BEFE02A55E1080032F78B /* ListenerScreenObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BEFDE2A5576BF0032F78B /* ListenerScreenObject.swift */; };
 		B3C1E0642A5344AF00342DEF /* FirebaseAuthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1E0632A5344AF00342DEF /* FirebaseAuthApp.swift */; };
 		B3C1E0662A5344AF00342DEF /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1E0652A5344AF00342DEF /* HomeScreen.swift */; };
 		B3C1E0682A5344B000342DEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C1E0672A5344B000342DEF /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		B30BEFDB2A554CBF0032F78B /* GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
+		B30BEFDE2A5576BF0032F78B /* ListenerScreenObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerScreenObject.swift; sourceTree = "<group>"; };
 		B3C1E0602A5344AF00342DEF /* firebase-auth-poc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "firebase-auth-poc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C1E0632A5344AF00342DEF /* FirebaseAuthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthApp.swift; sourceTree = "<group>"; };
 		B3C1E0652A5344AF00342DEF /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -89,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B30BEFDD2A5576A30032F78B /* Listener */ = {
+			isa = PBXGroup;
+			children = (
+				B3D4AD4B2A54A30600B26A84 /* ListenerScreen.swift */,
+				B30BEFDE2A5576BF0032F78B /* ListenerScreenObject.swift */,
+			);
+			path = Listener;
+			sourceTree = "<group>";
+		};
 		B3C1E0572A5344AF00342DEF = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +164,7 @@
 			children = (
 				B3C1E0652A5344AF00342DEF /* HomeScreen.swift */,
 				B3D4AD4D2A54A60100B26A84 /* Presenter */,
-				B3D4AD4B2A54A30600B26A84 /* ListenerScreen.swift */,
+				B30BEFDD2A5576A30032F78B /* Listener */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -308,6 +319,7 @@
 			files = (
 				B3D4AD492A54A17D00B26A84 /* PresenterScreen.swift in Sources */,
 				B3DBC6FA2A541CC4003FCCC6 /* AppDelegate.swift in Sources */,
+				B30BEFE02A55E1080032F78B /* ListenerScreenObject.swift in Sources */,
 				B3D4AD4C2A54A30600B26A84 /* ListenerScreen.swift in Sources */,
 				B3D4AD4F2A54A68C00B26A84 /* PresenterScreenObject.swift in Sources */,
 				B3C1E0662A5344AF00342DEF /* HomeScreen.swift in Sources */,
